@@ -76,13 +76,15 @@ function Formulario(props) {
     
     if(cpf!=="" && dataNascimento!=="" && cep!=="" && logradouro!=="" && numero!=="" 
       && bairro!=="" && cidade!=="" && email!=="" && cargo!=="" && celular!=="") {
-        const res = await api.post('/api/candidatos', dadosForm)
-            if(res.status === 200) {
-            history.push('./concluido');
-            setErro(false);
-            } else {
-              alert('Ocorreu um erro ao cadastrar no servidor, tente novamente!');
-            }  
+        
+          const res = await api.post('/api/candidatos', dadosForm);
+          if(res.status === 400) {
+              alert('CPF já existe.');
+          } else if(res.status === 200) {
+                history.push('./concluido');
+          } else {
+                alert('Ocorreu um erro ao cadastrar no servidor, tente novamente!');
+          }  
     } else {
         alert('Por favor, preencha todos os dados!');
     }
