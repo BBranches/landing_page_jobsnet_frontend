@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+body {
+  background: url(img/background.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+form {
+  width: 35vw;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 1400px){
+  form {
+    width: 50vw;
+  }
+}
+@media only screen and (max-width: 1200px){
+  form {
+    width: 60vw;
+  }
+}
+@media only screen and (max-width: 1000px){
+  form {
+    width: 70vw;
+  }
+}
+@media only screen and (max-width: 800px){
+  form {
+    width: 80vw;
+  }
+}
+@media only screen and (max-width: 600px){
+  form {
+    width: 90vw;
+  }
+}
+
+
