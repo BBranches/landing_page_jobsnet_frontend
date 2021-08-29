@@ -76,28 +76,16 @@ function Formulario(props) {
     
     if(cpf!=="" && dataNascimento!=="" && cep!=="" && logradouro!=="" && numero!=="" 
       && bairro!=="" && cidade!=="" && email!=="" && cargo!=="" && celular!=="") {
-        await api.post('/api/candidatos', dadosForm).then( res => {
+        const res = await api.post('/api/candidatos', dadosForm)
             if(res.status === 200) {
             history.push('./concluido');
             setErro(false);
             } else {
               alert('Ocorreu um erro ao cadastrar no servidor, tente novamente!');
-            }
-        }).catch(err => {
-            setErro(true);
-        });   
+            }  
     } else {
         alert('Por favor, preencha todos os dados!');
     }
-    
-    // axios.post('./confirmacao', dadosFormulario)
-    //   .then(() => {
-    //     setErro(false);
-    //     history.push();
-    //   })
-    //   .catch(err => {
-    //     setErro(true);
-    //   })
   }
 
   return (
