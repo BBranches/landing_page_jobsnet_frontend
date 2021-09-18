@@ -103,7 +103,6 @@ export const Select = styled.select`
   padding: .5rem;
   border-radius: .3rem;
   margin: 0.5rem;
-  text-align: center;
   background-color: rgba(255, 255, 255, 0.1);
   color: #ddd;
   font-size: 1rem;
